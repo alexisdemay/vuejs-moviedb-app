@@ -42,8 +42,8 @@ jobs:
 
       - name: Audit performance website
         uses: treosh/lighthouse-ci-action@v7
-          with:
-            urls: |
-              https://vuejs-moviedb-app.herokuapp.com/
+        with:
+          urls: |
+            https://vuejs-moviedb-app.herokuapp.com/
             uploadArtifacts: true
             temporaryPublicStorage: true

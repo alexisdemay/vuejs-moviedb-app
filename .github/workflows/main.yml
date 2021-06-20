@@ -45,5 +45,5 @@ jobs:
         with:
           urls: |
             https://vuejs-moviedb-app.herokuapp.com/
-            uploadArtifacts: true
-            temporaryPublicStorage: true
+          uploadArtifacts: true
+          temporaryPublicStorage: true

@@ -16,7 +16,7 @@ const routes: Array<RouteConfig> = [
     component: Music
   },
   {
-    path: "/music",
+    path: "/movies",
     name: "movies",
     component: () => import("@/views/Movies.vue")
   },

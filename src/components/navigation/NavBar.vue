@@ -14,7 +14,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link" :active-class="'active'" :to="{ path: '/music' }" @click.native="updateSelectedTab(Tab.MOVIES)">
+          <router-link
+            class="nav-link"
+            :class="{ active: musicTabIsActive }"
+            :active-class="'active'"
+            :to="{ path: '/music' }"
+            @click.native="updateSelectedTab(Tab.MUSIC)"
+          >
             {{ $t("navBar.titleMusicMenu") }}
           </router-link>
         </li>
@@ -54,6 +60,10 @@ export default class NavBar extends Vue {
 
   public get Tab() {
     return Tab;
+  }
+
+  public get musicTabIsActive() {
+    return this.$route.path === "/";
   }
 }
 </script>

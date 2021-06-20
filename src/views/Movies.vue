@@ -6,12 +6,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import SearchBar from "@/components/SearchBar.vue";
-import VideoPlayer from "@/components/VideoPlayer.vue";
-import SuggestVideoList from "@/components/SuggestVideoList.vue";
-@Component({
-  components: { SuggestVideoList, VideoPlayer, SearchBar }
-})
+@Component({})
 export default class Movies extends Vue {}
 </script>
 

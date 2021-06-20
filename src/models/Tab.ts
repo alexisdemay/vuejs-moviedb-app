@@ -1,5 +1,5 @@
 export enum Tab {
+  MUSIC = "music",
   MOVIES = "movies",
-  TV_SHOWS = "tv-shows",
-  TEST = "test"
+  TV_SHOWS = "tv-shows"
 }

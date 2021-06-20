@@ -36,9 +36,6 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-        env:
-            VUE_APP_MOVIE_DB_API_KEY: ${{secrets.VUE_APP_MOVIE_DB_API_KEY}}
-            VUE_APP_MOVIE_DB_API_URL: "https://api.themoviedb.org/3"
 
       - name: Audit performance website
         uses: treosh/lighthouse-ci-action@v7

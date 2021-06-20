@@ -12,12 +12,39 @@ Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
 Vue.use(IconsPlugin);
 
-new Vue({
-  i18n,
-  router,
-  store,
-  provide: {
-    moviesService: () => new MoviesService()
-  },
-  render: h => h(App)
-}).$mount("#app");
+const sleep = () => new Promise<void>((resolve) => setTimeout(() => resolve(), 100));
+const init = async () => {
+  performance.mark("One");
+  await sleep();
+
+  performance.mark("Two");
+  await sleep();
+
+  performance.mark("Three");
+  await sleep();
+
+  performance.mark("Four");
+};
+
+function renderApp() {
+  new Vue({
+    i18n,
+    router,
+    store,
+    provide: {
+      moviesService: () => new MoviesService()
+    },
+    render: h => h(App)
+  }).$mount("#app");
+}
+
+function main() {
+  renderApp();
+}
+
+init().then(() => {
+  performance.measure("🐪 Outer 🐪", "One", "Four");
+  performance.measure("🐪 Inner 🐪", "Two", "Three");
+
+  main();
+});

@@ -1,0 +1,9 @@
+@import "~bootstrap";
+@import "~bootstrap-vue";
+@import "./variables/colors.scss";
+@import "./fonts.scss";
+
+html,
+body {
+  font-family: $font-regular;
+}

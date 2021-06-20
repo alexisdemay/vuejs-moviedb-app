@@ -1,0 +1,10 @@
+{
+  "navBar": {
+    "titleMusicMenu": "Music",
+    "titleMoviesMenu": "Movies",
+    "titleTvShowsMenu": "TV Shows"
+  },
+  "searchBar": {
+    "searchPlaceholder": "Search ..."
+  }
+}

@@ -35,17 +35,16 @@ export default class SearchBar extends Vue {
 
   private searchText: string = EMPTY_STRING;
 
-  private launchSearch(): void {
+  private async launchSearch(): Promise<void> {
     if (!this.searchText) return;
-    this.moviesService()
-      .searchMovies(Local.FR, 1, true, this.searchText)
-      .then(response => this.updateMoviesResult(response.data))
-      .catch(error => {
-          console.error(error);
-      });
+    try {
+      const response = await this.moviesService().searchByQuery(Local.FR, 1, true, this.searchText);
+      this.updateMoviesResult(response.data);
+    } catch (error) {
+      console.error(error);
+    }
     this.searchText = EMPTY_STRING;
   }
-
 }
 </script>
 

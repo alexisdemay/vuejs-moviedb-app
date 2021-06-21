@@ -13,7 +13,7 @@ export default class TvShows extends Vue {}
 <style lang="scss" scoped>
 .tv-shows {
   &-container {
-      padding: 24px;
+    padding: 24px;
   }
 }
 </style>

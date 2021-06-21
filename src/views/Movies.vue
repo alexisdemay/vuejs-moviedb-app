@@ -1,6 +1,6 @@
 <template>
   <div class="movies-containers">
-      <h1>Movies</h1>
+    <h1>Movies</h1>
   </div>
 </template>
 
